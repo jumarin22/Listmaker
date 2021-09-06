@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.raywenderlich.listmaker.ui.detail.R
+import com.raywenderlich.listmaker.R
 
 class ListDetailFragment : Fragment() {
 
@@ -25,7 +25,7 @@ class ListDetailFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ListDetailViewModel::class.java)
+        viewModel = ViewModelProvider(requireActivity()).get(ListDetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
